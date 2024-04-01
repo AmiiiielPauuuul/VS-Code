@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator By Gonzales</title>
+    <link rel="stylesheet" href="Calculator jQuery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <br><br><br>
+    <h1>Calculator Program By Gonzales</h1>
+
+    <div class="main">
+        <div class="calculator">
+            <input type="text" id="display" disabled style="width: 225px; color: aliceblue;">
+            <input type="button" value="7" onclick="addToDisplay('7')" id="but7">
+            <input type="button" value="8" onclick="addToDisplay('8')" id="but8">
+            <input type="button" value="9" onclick="addToDisplay('9')" id="but9">
+            <input type="button" value="/" onclick="addToDisplay('/')" id="but10">
+            <br>
+            <input type="button" value="4" onclick="addToDisplay('4')" id="but4">
+            <input type="button" value="5" onclick="addToDisplay('5')" id="but5">
+            <input type="button" value="6" onclick="addToDisplay('6')" id="but6">
+            <input type="button" value="*" onclick="addToDisplay('*')" id="but11">
+            <br>
+            <input type="button" value="1" onclick="addToDisplay('1')" id="but1">
+            <input type="button" value="2" onclick="addToDisplay('2')" id="but2">
+            <input type="button" value="3" onclick="addToDisplay('3')" id="but3">
+            <input type="button" value="-" onclick="addToDisplay('-')" id="but12">
+            <br>
+            <input type="button" value="C" onclick="clearDisplay()" id="but13">
+            <input type="button" value="0" onclick="addToDisplay('0')" id="but14">
+            <input type="button" value="." onclick="addToDisplay('.')" id="but15">
+            <input type="button" value="+" onclick="addToDisplay('+')" id="but16">
+            <br>
+            <input type="button" value="B" id="but17" onclick="backspace()">
+            <input type="button" value="=" onclick="calculate()" style="width: 163px;" id="but18">
+        </div>
+        <div class="colors">
+            <input type="button" value="Red" id="red" class="buttons" style="background-color: red;"> <br>
+            <input type="button" value="Blue" id="blue" class="buttons" style="background-color: blue;"> <br>
+            <input type="button" value="Green" id="green" class="buttons" style="background-color: green;"> <br>
+            <input type="button" value="Random" id="random" class="buttons">
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script src="Calculator jQuery.js"></script>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        $('#red').click(function(){
+            $(':button').css('background','red');
+            $('#green').css('background','green');
+            $('#blue').css('background','blue');
+            $('#random').css('background','white');
+        });
+
+        $('#green').click(function(){
+            $(':button').css('background','green');
+            $('#red').css('background','red');
+            $('#blue').css('background','blue');
+            $('#random').css('background','white');
+        });
+
+        $('#blue').click(function(){
+            $(':button').css('background','blue');
+            $('#green').css('background','green');
+            $('#red').css('background','red');
+            $('#random').css('background','white');
+        });
+
+        // $('#random').click(function(){
+        //     $(':button').css('background',getRandomColor());
+        //     $('#green').css('background','green');
+        //     $('#blue').css('background','blue');
+        //     $('#red').css('background','red');
+        // });
+
+
+        $('#random').click(function setRandomColor() {
+            $('#but1').css('background', getRandomColor());
+            $('#but2').css('background', getRandomColor());
+            $('#but3').css('background', getRandomColor());
+            $('#but4').css('background', getRandomColor());
+            $('#but5').css('background', getRandomColor());
+            $('#but6').css('background', getRandomColor());
+            $('#but7').css('background', getRandomColor());
+            $('#but8').css('background', getRandomColor());
+            $('#but9').css('background', getRandomColor());
+            $('#but10').css('background', getRandomColor());
+            $('#but11').css('background', getRandomColor());
+            $('#but12').css('background', getRandomColor());
+            $('#but13').css('background', getRandomColor());
+            $('#but14').css('background', getRandomColor());
+            $('#but15').css('background', getRandomColor());
+            $('#but16').css('background', getRandomColor());
+            $('#but17').css('background', getRandomColor());
+            $('#but18').css('background', getRandomColor());
+            $('#random').css('background', getRandomColor());
+        })
+
+    });
+</script>
+

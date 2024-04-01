@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonzales_Registration</title>
+</head>
+<body>
+    <p align = "right" style="font-size: 20px; color: orangered;" ><u><strong>Student Registration Form</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>
+    <div style="background-color: #ECECEC;">
+        <form>
+            <table align="center">
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type = "text" id = "firstName" placeholder="Enter your first name" style="height: 30px; width: 800px; border-radius: 5px; border-width: 0.1px;"></td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>Last Name: </td>
+                    <td><input type = "text" id = "lastName" placeholder="Enter your last name" style="height: 30px; width: 800px; border-radius: 5px; border-width: 0.1px;" ></td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type = "email" id = "email" placeholder="It should contain @" style="height: 30px; width: 800px; border-radius: 5px; border-width: 0.1px;"> </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>Mobile:</td>
+                    <td><input type="text" id="number" placeholder="Only 10 digits are allowed." style="height: 30px; width: 800px; border-radius: 5px; border-width: 0.1px;" maxlength="11" min="0" max="999999999" pattern="[0-9]{4}"> </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td><input type="radio" name="gender" value="male">Male 
+                        <input type="radio" name="gender" value="female">Female</td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td><label>Date of Birth:</label> </td>
+                    <td><select style="height: 30px;width: 266px; border-radius: 5px; border-width: 0.1px;">
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                    <select style="height: 30px;width: 266px; border-radius: 5px; border-width: 0.1px;">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                    <select style="height: 30px;width: 266px; border-radius: 5px; border-width: 0.1px;">
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                        <option>2028</option>
+                        <option>2029</option>
+                        <option>2030</option>
+                    </select></td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea rows="5" cols="50" style="width: 800px; border-radius: 5px; border-width: 0.1px;"></textarea></td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>City: </td>
+                    <td><input type ="text" style="height: 30px; width: 800px; border-radius: 5px; border-width: 0.1px;"> </Td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>Area PIN:</td>
+                    <td><input type="text" style="height: 30px; width: 800px; border-radius: 5px; border-width: 0.1px;"> </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>State: </td>
+                    <td><input type="text" style="height: 30px; width: 800px; border-radius: 5px; border-width: 0.1px;"></td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>Qualification:</td>
+                    <td><select>
+                        <option>Fresh Graduate</option>
+                        <option>With experience</option>
+                    </select></td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>Specialization:</td>
+                    <td><input type="checkbox">Computer Science <br>
+                        <input type="checkbox">Information Technology <br>
+                        <input type="checkbox">Computer Architecture <br>
+                        <input type="checkbox">Telecommunication </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="Password" style="height: 30px; width: 800px; border-radius: 5px; border-width: 0.1px;"> </td>
+                </tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr>
+                    <td><input type="submit" onclick="alert('You have registered!')" style="height: 35px; background-color: #5bb450; color: white; border: none; border-radius: 5px;" value="Registered" > </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+</body>
+</html>

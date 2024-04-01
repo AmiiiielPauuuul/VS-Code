@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Sample Form</title>
+
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td><label>Employee No:</label></td>
+                <td><input id="txtEmpNo" type="Text"></input></td>
+            </tr>
+            <tr>
+                <td><label>Name: </label></td>
+                <td><input type="Text" id="txtName"></td>
+            </tr>
+            <tr>
+                <td><label>Position:</label></td>
+                <td><input type="Text" id="txtPosition"></td>
+            </tr>
+            <tr>
+                <td><label>Training: </label></td>
+                <td><select id="selTrng" type="Text">
+                        <option value="Oracle PL/SQL"> Oracle PL/SQL </option>
+                        <option value="Oracle Forms and Reports">Oracle Forms and Reports</option>
+                        <option value="Java Bootcamp">Java Bootcamp</option>
+                        <option value="Jasper Reports">Jasper Reports</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>Completed?</td>
+                <td><input type="checkbox" id="chkCompleted"></td>
+            </tr>
+            <tr>
+                <td><label for="">Grade:</label></td>
+                <td><input type="radio" name="trngPassed" id="rdoPassed" value="passed">Passed</input>
+                    <input type="radio" name="trngPassed" id="rdoFailed" value="failed">Failed</input>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="submitForm()" value="Submit!"></input></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div id="results"></div>
+
+</body>
+
+
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+    function submitForm() {
+
+        var name = $('#txtName').val();
+        var empNo = $('#txtEmpNo').val();
+        var position = $('#txtPosition').val();
+        var trng = $('#selTrng').val();
+        var completed = false;
+
+        if ($('#chkCompleted').prop('checked'))
+            completed = true;
+        else
+            completed = false;
+
+
+        var grade = '';
+        if ($('#rdoPassed').prop('checked'))
+            grade = 'passed';
+        if ($('#rdoFailed').prop('checked'))
+            grade = 'failed';
+
+
+        var completedTxt = '';
+        if (completed)
+            completedTxt = 'successfully completed'
+        else
+            completedTxt = 'not successfully completed'
+
+        var result = name + ', a ' + position + ', has ' + completedTxt + ' and ' + grade + ' ' + trng + ' training.';
+
+        $('#results').text(result);
+
+    }
+</script>
+
+</html>

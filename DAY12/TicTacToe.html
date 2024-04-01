@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="TicTacToe.css">
+
+    <title>Tic Tac Toe</title>
+
+</head>
+
+<body>
+    <br>
+    <div class="container-fluid text-center">
+        <div class="top">
+            <div id="scoreboard">
+                <div class="playerScores playerX">
+                    <div class="inner-div1 player">✖</div>
+                    <div class="inner-div2 score" id="scoreX">0</div>
+                </div>
+                <div class="playerScores playerO">
+                    <div class="inner-div1 player">O</div>
+                    <div class="inner-div2 score" id="scoreO">0</div>
+                </div>
+            </div>
+
+            <h3>Start game or select player</h3>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4"> </div>
+                <div class="col-lg-4">
+                    <br><br>
+                    <center>
+                        <table>
+                            <tr>
+                                <td colspan="3">
+                            </tr>
+                            <tr>
+                                <td class="first">
+                                    <button class="sq1 r"></button>
+                                </td>
+                                <td class="second">
+                                    <button class="sq2 r"></button>
+                                </td>
+                                <td class="third">
+                                    <button class="sq3 r"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fourth">
+                                    <button class="sq4 r"></button>
+                                </td>
+                                <td class="fifth">
+                                    <button class="sq5 r"></button>
+                                </td>
+                                <td class="sixth">
+                                    <button class="sq6 r"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="seventh">
+                                    <button class="sq7 r"></button>
+                                </td>
+                                <td class="eight">
+                                    <button class="sq8 r"></button>
+                                </td>
+                                <td class="nineth">
+                                    <button class="sq9 r"></button>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                    </center>
+                </div>
+                <div class="col-lg-4"> </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input type="button" class="resetBtn" value="Restart Game" onclick="reset()" id="resetBtn" />
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="hidden">
+        <h1 class="result">wqedqedq</h1>
+    </div>
+
+    <div id="drawModal" class="modal">
+        <div class="modal-content">
+            <p class="modalTextPlayer">✖ <span style="color: beige;">O</span></p>
+            <p class="modalTextWinner">Draw!</p>
+        </div>
+    </div>
+
+    <div id="WinnerXModal" class="modal">
+        <div class="modal-content">
+            <p class="modalTextPlayer">✖</p>
+            <p class="modalTextWinner">Winner!</p>
+        </div>
+    </div>
+
+
+    <div id="WinnerOModal" class="modal">
+        <div class="modal-content">
+            <p class="modalTextPlayer" style="color: beige;">O</p>
+            <p class="modalTextWinner">Winner!</p>
+        </div>
+    </div>
+
+</body>
+<script src="TicTacToe.js"></script>
+<script src="jquery-3.7.1.min.js"></script>
+
+</html>

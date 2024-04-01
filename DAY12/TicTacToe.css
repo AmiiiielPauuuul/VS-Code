@@ -1,0 +1,211 @@
+body {
+    background-color: #202125;
+}
+
+.main {
+    background-color:#15BDAC ;
+}
+
+button {
+    height: 80px;
+    width: 80px;
+    background-color: #15BDAC;
+    border: 0px transparent;
+    margin: 4px;
+    padding: 4px;
+}
+
+.fa {
+    font-size: 48px;
+    color: black;
+}
+
+.reset {
+    padding: 8px;
+}
+
+.reset:hover {
+    opacity: 0.8;
+}
+
+.top {
+    color: white;
+}
+
+.first, .second, .fourth, .fifth {
+    border-right: solid 8px#0B9F91;
+    border-bottom: solid 8px #0B9F91;
+}
+
+
+
+.third, .sixth {
+    border-bottom: solid 8px #0B9F91;
+} 
+
+
+.seventh, .eight{
+    border-right: solid 8px #0B9F91;
+}
+
+.resetBtn {
+    background-color: #202125;
+    width: 100%;
+    color: #15BDAC;
+    border: none;
+    font-size: 30px;
+}
+
+h3 {
+    color: #FAFAFA;
+    opacity: 0.4;
+}
+
+.scores {
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FAFAFA;
+    border: 2px solid #15BDAC;
+    border-radius: 5px;
+}
+
+.scoreBox {
+    color: #FAFAFA;
+    border: 2px solid #15BDAC;
+    background-color: #202125;
+    height: 50px;
+    width: 200px;
+    border-radius: 15px;
+    text-align: right;
+    padding-right: 30px;
+    font-size: 30px;
+    border: none;
+} 
+
+td {
+    padding: 5px;
+    border-radius: 30;
+} 
+
+tr, td {
+    border-radius: 10px;
+}
+
+.glow {
+    animation: glowing 1s infinite;
+}
+
+@keyframes glowing {
+    0% {
+        color: #15BDAC;
+    }
+    50% {
+        color: #0B9F91;
+    }
+    100% {
+        color: #15BDAC;
+    }
+} */
+
+
+
+.play {
+    border-top: 2px solid #15BDAC ;
+    border-left: 2px solid #15BDAC;
+    border-bottom: 2px solid #15BDAC;
+    border-radius: 30px;
+    border: 2px solid #15BDAC;
+    border-radius: 15px;
+}
+
+.sc {
+    border-top: 2px solid #15BDAC ;
+    border-right: 2px solid #15BDAC;
+    border-bottom: 2px solid #15BDAC;
+    border-radius: 30px;
+    padding: 5px;
+} 
+
+ #scoreboard {
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap: 30px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: rgb(243, 243, 243);
+}
+
+.playerScores {
+    margin-top: 20px;
+    display: inline-flex;
+    flex-direction: row;
+    width: 250px;
+    gap: 140px; 
+    padding: 10px 20px;
+    background-color: #0d0e0f;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+
+  .active {
+    border-bottom: 3px solid #15BDAC;
+  }
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    margin-top: 175px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    display: none;
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #15bdac;
+    margin: auto;
+    padding: 20px;
+    width: 70rem;
+    height: 380px;
+    border: none;
+  }
+  
+  .modalText {
+    font-size: 60px;
+    margin: 0;
+    color: #434242fd;
+    font-weight: bold;
+  }
+  
+  .modalTextPlayer {
+    font-size: 120px;
+    margin: 0;
+    color: #434242;
+    font-weight: bold;
+  }
+  
+  .modalTextWinner {
+    font-size: 45px;
+    margin: 0;
+    color: #434242;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Sample Form</title>
+
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td><label>Employee No:</label></td>
+                <td><input id="txtEmpNo" type="Text"></input></td>
+            </tr>
+            <tr>
+                <td><label>Name: </label></td>
+                <td><input type="Text" id="txtName"></td>
+            </tr>
+            <tr>
+                <td><label>Position:</label></td>
+                <td><input type="Text" id="txtPosition"></td>
+            </tr>
+            <tr>
+                <td><label>Training: </label></td>
+                <td><select id="selTrng" type="Text">
+                        <option value="Oracle PL/SQL"> Oracle PL/SQL </option>
+                        <option value="Oracle Forms and Reports">Oracle Forms and Reports</option>
+                        <option value="Java Bootcamp">Java Bootcamp</option>
+                        <option value="Jasper Reports">Jasper Reports</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>Completed?</td>
+                <td><input type="checkbox" id="chkCompleted"></td>
+            </tr>
+            <tr>
+                <td><label for="">Grade:</label></td>
+                <td><input type="radio" name="trngPassed" id="rdoPassed" value="passed">Passed</input>
+                    <input type="radio" name="trngPassed" id="rdoFailed" value="failed">Failed</input>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="submitForm()" value="Submit!"></input></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div id="results"></div>
+
+    <br><br>
+    <div>
+        <table>
+            <tr>
+                <td><label>Employee No:</label></td>
+                <td><input id="txtEmpNo2" type="Text" disabled></input></td>
+            </tr>
+            <tr>
+                <td><label>Name: </label></td>
+                <td><input type="Text" id="txtName2" disabled></td>
+            </tr>
+            <tr>
+                <td><label>Position:</label></td>
+                <td><input type="Text" id="txtPosition2" disabled></td>
+            </tr>
+            <tr>
+                <td><label>Training: </label></td>
+                <td><select id="selTrng2" type="Text" disabled>
+                        <option value="Oracle PL/SQL"> Oracle PL/SQL </option>
+                        <option value="Oracle Forms and Reports">Oracle Forms and Reports</option>
+                        <option value="Java Bootcamp">Java Bootcamp</option>
+                        <option value="Jasper Reports">Jasper Reports</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>Completed?</td>
+                <td><input type="checkbox" id="chkCompleted2" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="">Grade:</label></td>
+                <td><input type="radio" name="trngPassed" id="rdoPassed2" value="passed" disabled>Passed</input>
+                    <input type="radio" name="trngPassed" id="rdoFailed2" value="failed" disabled>Failed</input>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="results"></div>
+    <script>
+        function submitForm() {
+
+            var name = document.getElementById('txtName').value;
+            var empNo = document.getElementById('txtEmpNo').value;
+            var position = document.getElementById('txtPosition').value;
+            var trng = document.getElementById('selTrng').value;
+            var completed = false;
+
+            if (document.getElementById('chkCompleted').checked)
+                completed = true;
+            else
+                completed = false;
+
+
+            var grade = '';
+            if (document.getElementById('rdoPassed').checked)
+                grade = 'passed';
+            if (document.getElementById('rdoFailed').checked)
+                grade = 'failed';
+
+
+            var completedTxt = '';
+            if (completed)
+                completedTxt = 'successfully completed'
+            else
+                completedTxt = 'not successfully completed'
+
+            var results = name + ', a ' + position + ', has ' + completedTxt + ' and ' + grade + ' ' + trng + ' training.';
+
+            document.getElementById('results').innerHTML = results;
+
+            document.getElementById("txtEmpNo2").value = document.getElementById("txtEmpNo").value;
+            document.getElementById("txtName2").value = document.getElementById("txtName").value;
+            document.getElementById("txtPosition2").value = document.getElementById("txtPosition").value;
+            document.getElementById("selTrng2").value = document.getElementById("selTrng").value;
+            document.getElementById("chkCompleted2").checked = document.getElementById("chkCompleted").checked;
+            document.getElementById("rdoPassed2").checked = document.getElementById("rdoPassed").checked;
+            document.getElementById("rdoFailed2").checked = document.getElementById("rdoFailed").checked;
+
+        }
+
+    </script>
+</body>
+
+</html>
